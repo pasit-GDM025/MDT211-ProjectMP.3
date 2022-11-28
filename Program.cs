@@ -12,36 +12,44 @@ class Program {
     
     public static void Main(string[]args)
     {
-        starting();
-        
-    }
-    public static void WhenStart(){
-         starting(); 
-        if(starter != '+'){ // เมื่อ login ได้ จะเริ้มทำงานส่วนนี้
-            explained();//ส่านนี้จะอธิบายให้ userว่าต้องกดอะไรบ้าง
-             inputCommand(); //รับค่าให้ ีuser พิม 1 2 3 แล้วเก็บในลิสด์ 
-
-        }
+        int StartMenuinput;
+         PrintStartingMenu();
+         StartMenuinput = int.Parse(Console.ReadLine());
+         if(StartMenuinput == 1){
+            ShowLoginMenu();
+             explained();
+               inputCommand();
+            }
+         if(StartMenuinput == 2){
+            starting();
+             if(starter != '+')
+             {
+               explained();
+               inputCommand();
+             }
+             else{
+              explained();
+              inputCommand();
+             }
+         } 
     }
     public static void starting(){
-        char Command;
         Console.Clear();
         Console.WriteLine(":::::::::::::::::::");
         Console.WriteLine("   Please input any letter to start");
         Console.WriteLine(":::::::::::::::::::");
         starter = char.Parse(Console.ReadLine());
-
     }
     public static void explained(){
-    Console.Clear();
+    Console.WriteLine(" - ");
     Console.WriteLine("-press number 1 - 3 to making a track- ");
     Console.WriteLine("Then Press 'p' to play");
     }
-    public void PrintMainMenuScreen(){
+    public static void PrintMainMenuScreen(){
         Console.Clear();
         PrintStartingMenu();
     }
-    public void PrintStartingMenu(){
+    public static void PrintStartingMenu(){
     Console.Clear();
     Console.WriteLine(":::::::::::::::::::");
     Console.WriteLine("Welcome to Mucsic player");
@@ -87,24 +95,35 @@ class Program {
         }
     }
     public static void ShowEmailLogin(){
-
+        LogIn.userLogin();
     }
     public static void ShowGuestLogin(){
-
+        LogIn.GuestLogIn();
     }
     public static void ShowMusicPlayer(){
-
+        
     }
     public static void inputCommand(){
-        char Command;
+        char Command = '+';
         if(starter != '+'){
               Console.WriteLine("Please Input play order: ");
 
         Command = char.Parse(Console.ReadLine());
         CircularLinkedList<char> Playlist = new CircularLinkedList<char>();
-        while(Command == '1'|| Command == '2'|| Command == '3')
-        { // ยังไม่เสด
-
+        while(Command == '1'|| Command == '2'|| Command == '3'||Command == '+')
+        { 
+            if(Command == '1'){
+                Console.WriteLine("1");
+                break;
+            }
+            if(Command == '2'){
+                Console.WriteLine("2");
+                break;
+            }
+            if(Command == '3'){
+                Console.WriteLine("3");
+                break;
+            }
         }
         }
     }
