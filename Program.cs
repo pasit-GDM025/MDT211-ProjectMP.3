@@ -101,30 +101,40 @@ class Program {
         LogIn.GuestLogIn();
     }
     public static void ShowMusicPlayer(){
-        
+
     }
     public static void inputCommand(){
         char Command = '+';
         if(starter != '+'){
+            Console.WriteLine("Input number 1 to start playlist");
               Console.WriteLine("Please Input play order: ");
 
         Command = char.Parse(Console.ReadLine());
         CircularLinkedList<char> Playlist = new CircularLinkedList<char>();
         while(Command == '1'|| Command == '2'|| Command == '3'||Command == '+')
         { 
+            Command = char.Parse(Console.ReadLine());
             if(Command == '1'){
-                Console.WriteLine("1");
-                break;
+               Playlist.Push('1');
             }
             if(Command == '2'){
-                Console.WriteLine("2");
-                break;
+               Playlist.Push('2');
             }
             if(Command == '3'){
-                Console.WriteLine("3");
-                break;
+                Playlist.Push('3');
             }
         }
+        for(int x = 0;x<=Playlist.GetLength();x++){
+            if(Playlist.Get(x) == '1'){
+                Console.WriteLine("Playing 1 ....");//เล่นเพลงแถวนี้
+            }
+            if(Playlist.Get(x) == '2'){
+                Console.WriteLine("Playing 2 ....");
+            }
+            if(Playlist.Get(x) == '3'){
+                Console.WriteLine("Playing 3 ....");
+            }
         }
     }
+}
 }

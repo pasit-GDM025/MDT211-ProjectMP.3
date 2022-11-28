@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "sfNr3vxynnQ3GOJkYIU2vZOhGUhN/DbjQhFt9ON9deQpvh7C3JfRDNZl9eaBRgw6LgPp1HMY19tMeqHyJCuTOQ==",
+  "dgSpecHash": "ORT32nfkNaNgmSSIrkRjN5MyPJfnNyGJcbMi6IZmTVQ3cv+gXSHM9rXcrBT1xCCHzFcdMzLnSjVsmt1CSYNpOQ==",
   "success": true,
   "projectFilePath": "D:\\Works\\GDMY2\\CODEY2\\MDT211-ProjectMP.3\\MDT211-ProjectMP.3.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\pasit\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+    "C:\\Users\\pasit\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512",
+    "C:\\Users\\pasit\\.nuget\\packages\\system.windows.extensions\\7.0.0\\system.windows.extensions.7.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
