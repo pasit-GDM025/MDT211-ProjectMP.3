@@ -12,26 +12,9 @@ class Program {
     
     public static void Main(string[]args)
     {
-        int StartMenuinput;
-         PrintStartingMenu();
-         StartMenuinput = int.Parse(Console.ReadLine());
-         if(StartMenuinput == 1){
-            ShowLoginMenu();
-             explained();
-               inputCommand();
-            }
-         if(StartMenuinput == 2){
-            starting();
-             if(starter != '+')
-             {
-               explained();
-               inputCommand();
-             }
-             else{
-              explained();
-              inputCommand();
-             }
-         } 
+        starting();
+        PrintStartingMenu(); 
+        InputFromKeyboard();
     }
     public static void starting(){
         Console.Clear();
@@ -48,6 +31,7 @@ class Program {
     public static void PrintMainMenuScreen(){
         Console.Clear();
         PrintStartingMenu();
+        InputFromKeyboard();
     }
     public static void PrintStartingMenu(){
     Console.Clear();
@@ -96,12 +80,19 @@ class Program {
     }
     public static void ShowEmailLogin(){
         LogIn.userLogin();
+        Console.Clear();
+        PrintMainMenuScreen();
     }
     public static void ShowGuestLogin(){
         LogIn.GuestLogIn();
+        Console.Clear();
+        PrintMainMenuScreen();
     }
     public static void ShowMusicPlayer(){
-
+        Console.WriteLine(":::::::::::::::::::");
+        Console.WriteLine("This is music player Enjoy!");
+        Console.WriteLine(":::::::::::::::::::");
+        Player.MusicPlayer.TrackPlayer();
     }
     public static void inputCommand(){
         char Command = '+';
