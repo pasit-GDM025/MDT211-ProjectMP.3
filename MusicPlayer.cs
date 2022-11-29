@@ -12,7 +12,21 @@ namespace Player
         public static void TrackPlayer()
         {
             SoundPlayer soundPlayer = new SoundPlayer();
-            soundPlayer.SoundLocation = "D:/Music/madiatrap ver2.wav";
+            soundPlayer.SoundLocation = "D:/My Music/Trak1_projectMp3.wav";
+            soundPlayer.Play();
+            Console.ReadKey();
+        }
+        public static void TrackPlayer2()
+        {
+            SoundPlayer soundPlayer = new SoundPlayer();
+            soundPlayer.SoundLocation = "D:/My Music/Trak2_projectMp3.wav";
+            soundPlayer.Play();
+            Console.ReadKey();
+        }
+           public static void TrackPlayer3()
+        {
+            SoundPlayer soundPlayer = new SoundPlayer();
+            soundPlayer.SoundLocation = "D:/My Music/Trak3_projectMp3.wav";
             soundPlayer.Play();
             Console.ReadKey();
         }

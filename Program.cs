@@ -12,9 +12,26 @@ class Program {
     
     public static void Main(string[]args)
     {
-        starting();
-        PrintStartingMenu(); 
-        InputFromKeyboard();
+       int StartMenuinput;
+         PrintStartingMenu();
+         StartMenuinput = int.Parse(Console.ReadLine());
+         if(StartMenuinput == 1){
+            ShowLoginMenu();
+             explained();
+               inputCommand();
+            }
+         if(StartMenuinput == 2){
+            starting();
+             if(starter != '+')
+             {
+               explained();
+               inputCommand();
+             }
+             else{
+              explained();
+              inputCommand();
+             }
+         }
     }
     public static void starting(){
         Console.Clear();
@@ -30,8 +47,8 @@ class Program {
     }
     public static void PrintMainMenuScreen(){
         Console.Clear();
-        PrintStartingMenu();
-        InputFromKeyboard();
+         explained();
+               inputCommand();
     }
     public static void PrintStartingMenu(){
     Console.Clear();
@@ -117,13 +134,16 @@ class Program {
         }
         for(int x = 0;x<=Playlist.GetLength();x++){
             if(Playlist.Get(x) == '1'){
-                Console.WriteLine("Playing 1 ....");//เล่นเพลงแถวนี้
+                Console.WriteLine("Playing 1 ....");
+                Player.MusicPlayer.TrackPlayer();
             }
             if(Playlist.Get(x) == '2'){
                 Console.WriteLine("Playing 2 ....");
+                 Player.MusicPlayer.TrackPlayer2();
             }
             if(Playlist.Get(x) == '3'){
                 Console.WriteLine("Playing 3 ....");
+                 Player.MusicPlayer.TrackPlayer3();
             }
         }
     }
